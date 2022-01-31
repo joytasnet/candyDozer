@@ -2272,6 +2272,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 946abfbd4ad5e1244a798f3e3d77c4bd, type: 3}
+--- !u!1 &1290708226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290708228}
+  - component: {fileID: 1290708227}
+  - component: {fileID: 1290708229}
+  m_Layer: 0
+  m_Name: CandyDestroyer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1290708227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290708226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1290708228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290708226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -7, z: -6}
+  m_LocalScale: {x: 17, y: 1, z: 12}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1290708229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290708226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bceee069a98ad548a8829f535e438b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1356066494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2777,10 +2834,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be5ba65e73ea4e4391880862fbd4ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candyPrefab: {fileID: 1040204797556962538, guid: c2108dd67296bd740869c56f46b163db,
-    type: 3}
+  candyPrefabs:
+  - {fileID: 1040204797556962538, guid: 3d0b104930c07d646b1242210ee901ef, type: 3}
+  - {fileID: 1040204797556962538, guid: 946abfbd4ad5e1244a798f3e3d77c4bd, type: 3}
+  - {fileID: 1040204797556962538, guid: c2108dd67296bd740869c56f46b163db, type: 3}
+  - {fileID: 1040204797556962538, guid: a1362fe19fd1cdf469be516d39b1a5a7, type: 3}
+  candyParentTransform: {fileID: 1609215442}
   shotForce: 560
   shotTorque: 30
+  baseWidth: 5
 --- !u!4 &1618316324
 Transform:
   m_ObjectHideFlags: 0
