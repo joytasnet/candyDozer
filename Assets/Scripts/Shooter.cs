@@ -7,12 +7,16 @@ public class Shooter : MonoBehaviour
     const int MaxShotPower = 5;
     const int RecoverySeconds = 3;
     int shotPower = MaxShotPower;
+    AudioSource shotSound;
     public GameObject[] candyPrefabs;
     public Transform candyParentTransform;
     public CandyManager candyManager;
     public float shotForce;
     public float shotTorque;
     public float baseWidth;
+    private void Start() {
+        shotSound = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (Input.GetButtonDown("Fire1")) {
@@ -48,6 +52,7 @@ public class Shooter : MonoBehaviour
 
         candyManager.ConsumeCandy();
         ConsumePower();
+        shotSound.Play();
 
     }
     private void OnGUI() {
